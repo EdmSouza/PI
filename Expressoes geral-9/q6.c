@@ -6,13 +6,13 @@ int main()
     double ltemreal;
     scanf("%lf\n%lf\n%lf",&pricegal,&pricelt,&cot);
     ltemreal = (pricegal/3.8)*cot;
-    printf("Gasolina EUA: R$ %.2f",ltemreal);
-    printf("Gasolina Brasil: R$ %.2f",pricelt);
+    printf("Gasolina EUA: R$ %.2f\n",ltemreal);
+    printf("Gasolina Brasil: R$ %.2f\n",pricelt);
     if(pricelt>ltemreal){
-        printf("Mais barata no Brasil");
+        printf("Mais barata nos EUA\n");
     }else if(ltemreal>pricelt){
-        print("Mais barata nos EUA");
+        printf("Mais barata no Brasil\n");
     }else{
-        printf("Igual");
+        printf("Igual\n");
     }
 }
