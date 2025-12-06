@@ -1,23 +1,31 @@
 #include <stdio.h>
-#include <stdio.h>
+#include <string.h>
 
-const int contarvogais(char vogais[50], char texto[100], int qtd){
-    int contador = 0;
-    for(int i = 0;i<=qtd;i++){
-        scanf("%s\n%s",vogais,texto);
-        for(int i=0; i<vogais)
-        for(int i = 0; resultado[i] != '\0';i++){
-            contador++;
+const int contar_vogais(char vog[100],char fras[100]){
+    int cont = 0;
+    int tamanhvog = strlen(vog);
+    int tamanhfra = strlen(fras);
+    for(int i = 0; i < tamanhvog; i++){
+        for(int j = 0; j < tamanhfra; j++){
+            if(vog[i] == fras[j]){
+                cont++;
+            }
         }
-    }return contador;
+    }
+    return cont;
 }
 
 
 int main()
 {
-    char vogais [50];
-    char texto [100];
+    char vogal[1000];
+    char frase[1000];
     int qtd;
     scanf("%d",&qtd);
-    printf("%d",contarvogais(vogais,texto,qtd));
+    for(int i = 0; i < qtd; i++){
+        scanf("%s %[^\n]",vogal,frase);
+        contar_vogais(vogal,frase);
+        int valoracumulado = contar_vogais(vogal,frase);
+        printf("%d\n",valoracumulado);
+    }
 }
