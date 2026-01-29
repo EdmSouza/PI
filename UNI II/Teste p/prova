@@ -1,0 +1,37 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+typedef struct{
+    char nome[50];
+    float notas[3];
+    float media;
+}Aluno;
+
+Aluno* al(int num){
+    Aluno* a = malloc(num*sizeof(Aluno));
+    calcularMediadeAlunos(a);
+    return a;
+}
+
+void calcularMediadeAlunos(Aluno *a){
+    float mediaf = 0;
+    a.media = &mediaf;
+    for(int i = 0; i<3; i++){
+        (a.media) += *(a[i].notas);
+    }
+    (a.media) = *(a.media)/(float)3;
+    ordenaralunos(a);
+}
+
+void ordenaralunos(Aluno *a){
+    for(int i = 0; i<3; i++){
+        float menor = (a[0].media);
+        for(int j=1; j<3; j++){
+            if(a[j].media = menor){
+                for(int k = 0; k<strlen(a.nome); k++){
+                    
+                }
+            }
+        }
+    }
+}
